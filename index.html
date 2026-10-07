@@ -51,10 +51,97 @@
         .cream {
             background: #f7efe2;
         }
+		.progress {
+			position:fixed;
+			top:0;
+			left:0;
+			width:3px;
+			height:100%;
+			background-color:#E8B94F;
+			animation: progress linear;
+			z-index: 9999;
+			transform-origin: 50% 0%;
+			animation-timeline:scroll();
+		}
+
+		@keyframes progress {
+			from { transform: scaleY(0); }
+			to { transform: scaleY(1); }
+		}
+		.text{
+			animation:appear 1s linear;
+		}
+		@keyframes appear{
+			from{
+				opacity:0;
+				transform:translateX(-40px);
+				filter:blur(5px);
+			}
+			to{
+				opacity: 1;
+				transform: translateX(0);
+				filter: blur(0);
+			}
+		}
+		.card{
+				animation:card linear;
+				animation-timeline:view();
+				animation-range:0% 40%;
+		}
+		@keyframes card{
+			from {
+				opacity: 0;
+				filter: blur(6px);
+				transform:translatex(-60px);
+			}
+		
+			to {
+				opacity: 1;
+				filter: blur(0);
+				transform:translateX(0);
+			}
+		}
+		.card2{
+				animation:card2 linear;
+				animation-timeline:view();
+				animation-range:0% 40%;
+		}
+		@keyframes card2{
+			from {
+				opacity: 0;
+				filter: blur(6px);
+				transform:translatex(60px);
+			}
+		
+			to {
+				opacity: 1;
+				filter: blur(0);
+				transform:translateX(0);
+			}
+		}
+		.card3{
+				animation:card3 linear;
+				animation-timeline:view();
+				animation-range:0% 40%;
+		}
+		@keyframes card3{
+			from {
+				opacity: 0;
+				filter: blur(6px);
+				transform:translateY(60px);
+			}
+		
+			to {
+				opacity: 1;
+				filter: blur(0);
+				transform:translateY(0);
+			}
+		}
     </style>
 </head>
 
 <body class="bg-[#120b08] text-white">
+	<div class="progress"></div>
 <aside class="fixed right-0 top-0 z-50 hidden h-screen w-[280px] border-l border-white/10 bg-[#0d0907]/95 p-7 backdrop-blur-xl lg:block">
     <div class="mb-10">
         <div class="flex items-center gap-3">
@@ -279,7 +366,7 @@
 
             <div class="relative flex h-full items-center px-8 md:px-16 xl:px-24">
 
-                <div class="max-w-xl">
+                <div class="max-w-xl text">
 
                     <p class="mb-5 font-serif text-xl italic text-[#e8b94f]">
                         Tradition in Every Bite
@@ -496,7 +583,7 @@
 
         <div class="mb-12 flex items-end justify-between">
 
-            <div>
+            <div class="card3">
 
                 <p class="font-serif italic text-[#a56b27]">
                     Shop by Category
@@ -521,7 +608,7 @@
 
         <div class="grid grid-cols-2 gap-5 md:grid-cols-3 xl:grid-cols-6">
 
-            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm">
+            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm card">
 
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeXU5dCGYw3wR_fW_vA6aqtjb_9tjYY3AmRddq9ej_Kg&s=10"
@@ -534,7 +621,7 @@
             </a>
 
 
-            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm">
+            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm card">
 
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4qNHpXxgZsh57BIz1MN6AQM-LZCw93muZ5HWnw6cLtw&s"
@@ -547,7 +634,7 @@
             </a>
 
 
-            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm">
+            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm card">
 
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfMRnYdcxvPpbpWKAKEF_2PbJN_H08qG5rbucWekLYAA&s=10"
@@ -560,7 +647,7 @@
             </a>
 
 
-            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm">
+            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm card2">
 
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNH3ub11c23tB7KtwF-96fbUt-Xu8X1E1UiFw6yCfzVw&s=10"
@@ -573,7 +660,7 @@
             </a>
 
 
-            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm">
+            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm card2">
 
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1S1tPKNlH1vI2dTNkdOpzbHvDh9nDzm8ZeuZYLfCj0g&s=10"
@@ -586,7 +673,7 @@
             </a>
 
 
-            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm">
+            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm card2">
 
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ2uYpaKk7wd8vcDIOOOL3L-k5yYod-VD0FHi_xu3Hqg&s=10"
@@ -607,7 +694,7 @@
 
     <div class="mx-auto max-w-7xl">
 
-        <div class="mb-12">
+        <div class="mb-12 card3">
 
             <p class="font-serif italic text-[#e8b94f]">
                 Handpicked Favorites
@@ -630,7 +717,7 @@
 
 
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c]">
+            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c] card">
 
                 <div class="relative overflow-hidden">
 
@@ -671,7 +758,7 @@
             </div>
 
 
-            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c]">
+            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c] card">
 
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK36iUgq4_o0w4tLamCtAclKJTYtro-wybxiaaCrxKgw&s=10"
@@ -704,7 +791,7 @@
             </div>
 
 
-            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c]">
+            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c] card">
 
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbQVK_WNu6hPw60no2SpRMaW3SAagQngJxzemIxIi1hA&s=10"
@@ -737,7 +824,7 @@
             </div>
 
 
-            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c]">
+            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c] card2">
 
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRsLTQYmbcgqVR9pzrCZdLJP85QUUwuF5iLFR3DHI1Xg&s=10"
@@ -770,7 +857,7 @@
             </div>
 
 
-            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c]">
+            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c] card2">
 
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQE97VrHZd3HSeBBH3Ta3-thtrwbyFjvNOAo2M9hYNuQ&s=10"
@@ -803,7 +890,7 @@
             </div>
 
 
-            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c]">
+            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c] card2">
 
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2alQ1X8X_OC7vtOpYxfB75bYEQI0iKUXRMzhgeZYy9Q&s=10"
@@ -844,7 +931,7 @@
 
     <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
 
-        <div class="overflow-hidden rounded-[30px]">
+        <div class="overflow-hidden rounded-[30px] card">
 
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyLcBF_x5MN7MFgVFYA1EJrEWll0hsakzo88AR7SUSJQ&s=10"
                 class="h-[500px] w-full object-cover">
@@ -852,7 +939,7 @@
         </div>
 
 
-        <div>
+        <div class="card2">
 
             <p class="font-serif italic text-[#a56b27]">
                 Our Story
@@ -916,7 +1003,7 @@
 </section>
 <section id="offers" class="px-6 py-20 md:px-12">
 
-    <div class="mx-auto grid max-w-7xl overflow-hidden rounded-[30px] bg-gradient-to-r from-[#8d342b] to-[#c38a37] lg:grid-cols-2">
+    <div class="mx-auto grid max-w-7xl overflow-hidden rounded-[30px] bg-gradient-to-r from-[#8d342b] to-[#c38a37] lg:grid-cols-2 card3">
 
         <div class="p-10 md:p-16">
 
@@ -954,42 +1041,42 @@
 
     <div class="mx-auto max-w-7xl text-center">
 
-        <p class="font-serif italic text-[#a56b27]">
+        <p class="font-serif italic text-[#a56b27] card3">
             Celebrate With Us
         </p>
 
-        <h2 class="serif mt-3 text-4xl font-bold md:text-5xl">
+        <h2 class="serif mt-3 text-4xl font-bold md:text-5xl card3">
             Perfect For Every Occasion
         </h2>
 
         <div class="mt-12 grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-6">
 
-            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7">
+            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7 card">
                 <i class="ri-fire-line text-4xl text-[#a56b27]"></i>
                 <p class="mt-4 font-semibold">Diwali</p>
             </div>
 
-            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7">
+            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7 card">
                 <i class="ri-heart-3-line text-4xl text-[#a56b27]"></i>
                 <p class="mt-4 font-semibold">Weddings</p>
             </div>
 
-            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7">
+            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7 card">
                 <i class="ri-cake-3-line text-4xl text-[#a56b27]"></i>
                 <p class="mt-4 font-semibold">Birthdays</p>
             </div>
 
-            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7">
+            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7 card2">
                 <i class="ri-gift-line text-4xl text-[#a56b27]"></i>
                 <p class="mt-4 font-semibold">Anniversaries</p>
             </div>
 
-            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7">
+            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7 card2">
                 <i class="ri-sun-line text-4xl text-[#a56b27]"></i>
                 <p class="mt-4 font-semibold">Festivals</p>
             </div>
 
-            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7">
+            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7 card2">
                 <i class="ri-briefcase-4-line text-4xl text-[#a56b27]"></i>
                 <p class="mt-4 font-semibold">Corporate</p>
             </div>
@@ -1003,7 +1090,7 @@
 
     <div class="mx-auto max-w-7xl">
 
-        <div class="text-center">
+        <div class="text-center card3">
 
             <p class="font-serif italic text-[#e8b94f]">
                 Real People. Real Sweetness.
@@ -1018,7 +1105,7 @@
 
         <div class="mt-12 grid gap-6 md:grid-cols-3">
 
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-7">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-7 card">
 
                 <div class="text-[#e8b94f]">
                     ★★★★★
@@ -1042,7 +1129,7 @@
             </div>
 
 
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-7">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-7 card3">
 
                 <div class="text-[#e8b94f]">
                     ★★★★★
@@ -1066,7 +1153,7 @@
             </div>
 
 
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-7">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-7 card2">
 
                 <div class="text-[#e8b94f]">
                     ★★★★★
@@ -1098,13 +1185,13 @@
 
     <div class="mx-auto max-w-5xl text-center">
 
-        <i class="ri-mail-send-line text-5xl text-[#a56b27]"></i>
+        <i class="ri-mail-send-line text-5xl text-[#a56b27] card3"></i>
 
-        <h2 class="serif mt-5 text-4xl font-bold">
+        <h2 class="serif mt-5 text-4xl font-bold card3">
             Stay Sweet, Stay Connected
         </h2>
 
-        <p class="mx-auto mt-4 max-w-xl text-gray-600">
+        <p class="mx-auto mt-4 max-w-xl text-gray-600 card3">
             Subscribe for new launches, festive offers,
             exclusive discounts and delicious updates.
         </p>
@@ -1133,7 +1220,7 @@
 
     <div class="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 lg:grid-cols-4">
 
-        <div>
+        <div class="card3">
 
             <h2 class="serif text-3xl italic">
                 Mithaas
@@ -1163,7 +1250,7 @@
         </div>
 
 
-        <div>
+        <div class="card3">
 
             <h3 class="font-semibold">
                 Quick Links
@@ -1196,7 +1283,7 @@
         </div>
 
 
-        <div>
+        <div class="card3">
 
             <h3 class="font-semibold">
                 Customer Care
@@ -1229,7 +1316,7 @@
         </div>
 
 
-        <div>
+        <div class="card3">
 
             <h3 class="font-semibold">
                 Contact Us
