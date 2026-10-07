@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mithaas - Indian Sweets</title>
+
+    <!-- Tailwind CSS CDN - No Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+        }
+
+        .serif {
+            font-family: "Playfair Display", serif;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            scrollbar-width: none;
+        }
+
+        .gold {
+            color: #e8b94f;
+        }
+
+        .gold-bg {
+            background: #e8b94f;
+        }
+
+        .chocolate {
+            background: #120b08;
+        }
+
+        .cream {
+            background: #f7efe2;
+        }
+    </style>
+</head>
+
+<body class="bg-[#120b08] text-white">
+<aside class="fixed right-0 top-0 z-50 hidden h-screen w-[280px] border-l border-white/10 bg-[#0d0907]/95 p-7 backdrop-blur-xl lg:block">
+    <div class="mb-10">
+        <div class="flex items-center gap-3">
+            <div class="flex h-12 w-12 items-center justify-center">
+                <img src="https://png.pngtree.com/png-vector/20260929/ourmid/pngtree-traditional-indian-sweet-gulab-jamun-in-a-clay-bowl-png-image_20248678.webp" class="w-28">
+            </div>
+
+            <div>
+                <h1 class="serif text-2xl italic">Mithaas</h1>
+                <p class="text-[8px] tracking-[3px] text-gray-400">
+                    SWEETS • SNACKS • HAPPINESS
+                </p>
+            </div>
+        </div>
+    </div>
+    <nav class="space-y-2">
+
+        <a href="#home"
+           class="flex items-center gap-4 rounded-xl px-5 py-3 text-sm hover:bg-white/10">
+            <i class="ri-home-5-line"></i>
+            Home
+        </a>
+        <div class="group relative">
+
+            <a href="#sweets"
+               class="flex items-center justify-between rounded-xl px-5 py-3 text-sm transition hover:bg-white/10">
+
+                <span class="flex items-center gap-4">
+                    <i class="ri-cake-2-line"></i>
+                    Sweets
+                </span>
+
+                <i class="ri-arrow-right-s-line"></i>
+            </a>
+            <div class="invisible absolute right-full top-0 mr-3 w-56 translate-x-3 rounded-2xl border border-white/10 bg-[#1a100c] p-3 opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100">
+
+                <p class="px-3 py-2 text-xs uppercase tracking-widest text-[#e8b94f]">
+                    Sweet Collection
+                </p>
+
+                <a href="#" class="block rounded-lg px-3 py-3 text-sm hover:bg-[#e8b94f] hover:text-black">
+                    Gulab Jamun
+                </a>
+
+                <a href="#" class="block rounded-lg px-3 py-3 text-sm hover:bg-[#e8b94f] hover:text-black">
+                    Rasgulla
+                </a>
+
+                <a href="#" class="block rounded-lg px-3 py-3 text-sm hover:bg-[#e8b94f] hover:text-black">
+                    Kaju Katli
+                </a>
+
+                <a href="#" class="block rounded-lg px-3 py-3 text-sm hover:bg-[#e8b94f] hover:text-black">
+                    Motichoor Ladoo
+                </a>
+
+                <a href="#" class="block rounded-lg px-3 py-3 text-sm hover:bg-[#e8b94f] hover:text-black">
+                    Peda
+                </a>
+            </div>
+
+        </div>
+        <div class="group relative">
+
+            <a href="#snacks"
+               class="flex items-center justify-between rounded-xl px-5 py-3 text-sm transition hover:bg-white/10">
+
+                <span class="flex items-center gap-4">
+                    <i class="ri-restaurant-2-line"></i>
+                    Snacks
+                </span>
+
+                <i class="ri-arrow-right-s-line"></i>
+            </a>
+
+            <div class="invisible absolute right-full top-0 mr-3 w-56 translate-x-3 rounded-2xl border border-white/10 bg-[#1a100c] p-3 opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100">
+
+                <p class="px-3 py-2 text-xs uppercase tracking-widest text-[#e8b94f]">
+                    Snacks
+                </p>
+
+                <a href="#" class="block rounded-lg px-3 py-3 text-sm hover:bg-[#e8b94f] hover:text-black">
+                    Samosa
+                </a>
+
+                <a href="#" class="block rounded-lg px-3 py-3 text-sm hover:bg-[#e8b94f] hover:text-black">
+                    Kachori
+                </a>
+
+                <a href="#" class="block rounded-lg px-3 py-3 text-sm hover:bg-[#e8b94f] hover:text-black">
+                    Namkeen
+                </a>
+
+                <a href="#" class="block rounded-lg px-3 py-3 text-sm hover:bg-[#e8b94f] hover:text-black">
+                    Bhujia
+                </a>
+
+            </div>
+
+        </div>
+        <div class="group relative">
+
+            <a href="#gifts"
+               class="flex items-center justify-between rounded-xl px-5 py-3 text-sm transition hover:bg-white/10">
+
+                <span class="flex items-center gap-4">
+                    <i class="ri-gift-line"></i>
+                    Gifts
+                </span>
+
+                <i class="ri-arrow-right-s-line"></i>
+            </a>
+
+            <div class="invisible absolute right-full top-0 mr-3 w-56 translate-x-3 rounded-2xl border border-white/10 bg-[#1a100c] p-3 opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100">
+
+                <p class="px-3 py-2 text-xs uppercase tracking-widest text-[#e8b94f]">
+                    Gift Boxes
+                </p>
+
+                <a href="#" class="block rounded-lg px-3 py-3 text-sm hover:bg-[#e8b94f] hover:text-black">
+                    Festival Gifts
+                </a>
+
+                <a href="#" class="block rounded-lg px-3 py-3 text-sm hover:bg-[#e8b94f] hover:text-black">
+                    Wedding Gifts
+                </a>
+
+                <a href="#" class="block rounded-lg px-3 py-3 text-sm hover:bg-[#e8b94f] hover:text-black">
+                    Corporate Gifts
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <a href="#combos"
+           class="flex items-center gap-4 rounded-xl px-5 py-3 text-sm hover:bg-white/10">
+            <i class="ri-box-3-line"></i>
+            Combos
+        </a>
+
+
+        <a href="#offers"
+           class="flex items-center gap-4 rounded-xl px-5 py-3 text-sm hover:bg-white/10">
+            <i class="ri-price-tag-3-line"></i>
+            Offers
+        </a>
+
+
+        <a href="#about"
+           class="flex items-center gap-4 rounded-xl px-5 py-3 text-sm hover:bg-white/10">
+            <i class="ri-user-3-line"></i>
+            About Us
+        </a>
+
+
+        <a href="#contact"
+           class="flex items-center gap-4 rounded-xl px-5 py-3 text-sm hover:bg-white/10">
+            <i class="ri-mail-line"></i>
+            Contact
+        </a>
+
+    </nav>
+    <div class="mt-8 flex items-center rounded-full border border-white/10 px-4 py-3">
+
+        <input
+            type="text"
+            placeholder="Search sweets..."
+            class="w-full bg-transparent text-sm outline-none placeholder:text-gray-500">
+
+        <i class="ri-search-line text-[#e8b94f]"></i>
+
+    </div>
+    <div class="mt-5 flex items-center justify-between rounded-xl bg-white/5 p-4">
+
+        <div class="flex items-center gap-3">
+            <i class="ri-shopping-cart-line text-xl text-[#e8b94f]"></i>
+
+            <span class="text-sm">
+                My Cart
+            </span>
+
+            <span class="flex h-5 w-5 items-center justify-center rounded-full bg-[#e8b94f] text-xs text-black">
+                2
+            </span>
+        </div>
+
+        <span class="font-semibold">
+            ₹680
+        </span>
+</aside>
+<header class="fixed left-0 right-0 top-0 z-40 flex items-center justify-between bg-[#100a07]/90 px-5 py-4 backdrop-blur-xl lg:hidden">
+
+    <div>
+        <h1 class="serif text-2xl italic">
+            Mithaas
+        </h1>
+
+        <p class="text-[7px] tracking-[3px] text-gray-400">
+            SWEETS • SNACKS • HAPPINESS
+        </p>
+    </div>
+
+    <button class="rounded-full border border-white/20 p-2">
+        <i class="ri-menu-line text-xl"></i>
+    </button>
+
+</header>
+<main class="lg:mr-[280px]">
+<section id="home"
+         class="relative h-screen min-h-[700px] overflow-hidden">
+    <div class="hide-scrollbar flex h-full snap-x snap-mandatory overflow-x-auto">
+        <div class="relative min-w-full snap-start">
+
+            <img
+                src="images/hero1.png"
+                class="absolute inset-0 h-full w-full object-cover"
+                alt="Indian sweets">
+
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-black/20"></div>
+
+            <div class="relative flex h-full items-center px-8 md:px-16 xl:px-24">
+
+                <div class="max-w-xl">
+
+                    <p class="mb-5 font-serif text-xl italic text-[#e8b94f]">
+                        Tradition in Every Bite
+                    </p>
+
+                    <h2 class="serif text-5xl font-bold leading-tight md:text-7xl">
+
+                        Timeless Sweets
+                        <br>
+
+                        for
+                        <span class="text-[#e8b94f]">
+                            Every Moment
+                        </span>
+
+                    </h2>
+
+                    <p class="mt-6 max-w-lg text-gray-300">
+                        From traditional Indian sweets to modern delights,
+                        Mithaas brings you the perfect blend of taste,
+                        quality and tradition.
+                    </p>
+
+                    <a href="#sweets"
+                       class="mt-8 inline-flex items-center gap-3 rounded-full bg-[#e8b94f] px-7 py-4 font-semibold text-black transition hover:scale-105">
+
+                        Explore Our Collection
+
+                        <i class="ri-arrow-right-line"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="relative min-w-full snap-start">
+
+            <img
+                src="images/hero2.png"
+                class="absolute inset-0 h-full w-full object-cover"
+                alt="Dessert">
+
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent"></div>
+
+            <div class="relative flex h-full items-center px-8 md:px-16 xl:px-24">
+
+                <div class="max-w-xl">
+
+                    <p class="mb-5 font-serif text-xl italic text-[#e8b94f]">
+                        Made Fresh Every Day
+                    </p>
+
+                    <h2 class="serif text-5xl font-bold leading-tight md:text-7xl">
+
+                        A Little
+                        <br>
+
+                        Box of
+                        <span class="text-[#e8b94f]">
+                            Happiness
+                        </span>
+
+                    </h2>
+
+                    <p class="mt-6 text-gray-300">
+                        Carefully handcrafted sweets made with premium
+                        ingredients and generations of expertise.
+                    </p>
+
+                    <a href="#gifts"
+                       class="mt-8 inline-flex items-center gap-3 rounded-full bg-[#e8b94f] px-7 py-4 font-semibold text-black">
+
+                        Shop Gift Boxes
+
+                        <i class="ri-gift-line"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="relative min-w-full snap-start">
+
+            <img
+                src="images/hero3.png"
+                class="absolute inset-0 h-full w-full object-cover"
+                alt="Sweet dessert">
+
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent"></div>
+
+            <div class="relative flex h-full items-center px-8 md:px-16 xl:px-24">
+
+                <div class="max-w-xl">
+
+                    <p class="mb-5 font-serif text-xl italic text-[#e8b94f]">
+                        Celebrate With Mithaas
+                    </p>
+
+                    <h2 class="serif text-5xl font-bold leading-tight md:text-7xl">
+
+                        Sweetness
+                        <br>
+
+                        For
+                        <span class="text-[#e8b94f]">
+                            Every Celebration
+                        </span>
+
+                    </h2>
+
+                    <p class="mt-6 text-gray-300">
+                        Make birthdays, weddings, festivals and special
+                        moments even sweeter with Mithaas.
+                    </p>
+
+                    <a href="#combos"
+                       class="mt-8 inline-flex items-center gap-3 rounded-full bg-[#e8b94f] px-7 py-4 font-semibold text-black">
+
+                        Discover Combos
+
+                        <i class="ri-arrow-right-line"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="absolute bottom-12 left-8 flex gap-3 md:left-16">
+
+        <a href="#slide1"
+           class="h-2 w-10 rounded-full bg-[#e8b94f]"></a>
+
+        <span class="h-2 w-2 rounded-full bg-white/50"></span>
+
+        <span class="h-2 w-2 rounded-full bg-white/50"></span>
+
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-md">
+
+        <div class="grid grid-cols-2 divide-x divide-white/10 md:grid-cols-4">
+
+            <div class="p-5 text-center">
+
+                <i class="ri-leaf-line text-2xl text-[#e8b94f]"></i>
+
+                <p class="mt-2 text-sm font-semibold">
+                    Pure Ingredients
+                </p>
+
+                <p class="text-xs text-gray-400">
+                    100% natural & fresh
+                </p>
+
+            </div>
+
+            <div class="p-5 text-center">
+
+                <i class="ri-restaurant-line text-2xl text-[#e8b94f]"></i>
+
+                <p class="mt-2 text-sm font-semibold">
+                    Wide Variety
+                </p>
+
+                <p class="text-xs text-gray-400">
+                    Sweets, snacks & more
+                </p>
+
+            </div>
+
+            <div class="p-5 text-center">
+
+                <i class="ri-truck-line text-2xl text-[#e8b94f]"></i>
+
+                <p class="mt-2 text-sm font-semibold">
+                    Fast Delivery
+                </p>
+
+                <p class="text-xs text-gray-400">
+                    Freshness at your door
+                </p>
+
+            </div>
+
+            <div class="hidden p-5 text-center md:block">
+
+                <i class="ri-heart-3-line text-2xl text-[#e8b94f]"></i>
+
+                <p class="mt-2 text-sm font-semibold">
+                    Made With Love
+                </p>
+
+                <p class="text-xs text-gray-400">
+                    Since 1998
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="sweets" class="cream px-6 py-20 text-[#21130e] md:px-12">
+
+    <div class="mx-auto max-w-7xl">
+
+        <div class="mb-12 flex items-end justify-between">
+
+            <div>
+
+                <p class="font-serif italic text-[#a56b27]">
+                    Shop by Category
+                </p>
+
+                <h2 class="serif mt-2 text-4xl font-bold md:text-5xl">
+                    Explore Our Delicious Range
+                </h2>
+
+                <p class="mt-3 text-gray-600">
+                    Discover something delicious for every mood.
+                </p>
+
+            </div>
+
+            <a href="#" class="hidden md:block">
+                View All →
+            </a>
+
+        </div>
+
+
+        <div class="grid grid-cols-2 gap-5 md:grid-cols-3 xl:grid-cols-6">
+
+            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeXU5dCGYw3wR_fW_vA6aqtjb_9tjYY3AmRddq9ej_Kg&s=10"
+                    class="h-32 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+
+                <h3 class="mt-4 text-center font-semibold">
+                    Sweets
+                </h3>
+
+            </a>
+
+
+            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4qNHpXxgZsh57BIz1MN6AQM-LZCw93muZ5HWnw6cLtw&s"
+                    class="h-32 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+
+                <h3 class="mt-4 text-center font-semibold">
+                    Snacks
+                </h3>
+
+            </a>
+
+
+            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfMRnYdcxvPpbpWKAKEF_2PbJN_H08qG5rbucWekLYAA&s=10"
+                    class="h-32 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+
+                <h3 class="mt-4 text-center font-semibold">
+                    Gift Boxes
+                </h3>
+
+            </a>
+
+
+            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNH3ub11c23tB7KtwF-96fbUt-Xu8X1E1UiFw6yCfzVw&s=10"
+                    class="h-32 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+
+                <h3 class="mt-4 text-center font-semibold">
+                    Combos
+                </h3>
+
+            </a>
+
+
+            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1S1tPKNlH1vI2dTNkdOpzbHvDh9nDzm8ZeuZYLfCj0g&s=10"
+                    class="h-32 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+
+                <h3 class="mt-4 text-center font-semibold">
+                    Dry Fruits
+                </h3>
+
+            </a>
+
+
+            <a href="#" class="group overflow-hidden rounded-2xl bg-white p-3 shadow-sm">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ2uYpaKk7wd8vcDIOOOL3L-k5yYod-VD0FHi_xu3Hqg&s=10"
+                    class="h-32 w-full rounded-xl object-cover transition duration-500 group-hover:scale-105">
+
+                <h3 class="mt-4 text-center font-semibold">
+                    Specials
+                </h3>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="bg-[#120b08] px-6 py-20 md:px-12">
+
+    <div class="mx-auto max-w-7xl">
+
+        <div class="mb-12">
+
+            <p class="font-serif italic text-[#e8b94f]">
+                Handpicked Favorites
+            </p>
+
+            <div class="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+
+                <h2 class="serif text-4xl font-bold md:text-5xl">
+                    Featured Sweets
+                </h2>
+
+                <a href="#"
+                   class="rounded-full border border-[#e8b94f] px-6 py-3 text-sm text-[#e8b94f]">
+                    View All Sweets →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c]">
+
+                <div class="relative overflow-hidden">
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf-o116M8OwMtV5PShx2jIbCFlhReDAUlwzWzNRiZTMw&s=10"
+                        class="h-48 w-full object-cover transition duration-500 group-hover:scale-110">
+
+                    <span class="absolute left-3 top-3 rounded-full bg-[#e8b94f] px-3 py-1 text-xs font-bold text-black">
+                        Best Seller
+                    </span>
+
+                </div>
+
+                <div class="p-4">
+
+                    <h3 class="font-semibold">
+                        Gulab Jamun
+                    </h3>
+
+                    <p class="mt-1 text-sm text-gray-400">
+                        ₹180 / kg
+                    </p>
+
+                    <div class="mt-3 flex items-center justify-between">
+
+                        <span class="text-sm text-[#e8b94f]">
+                            ★ 4.8
+                        </span>
+
+                        <button class="rounded-full bg-[#e8b94f] p-2 text-black">
+                            <i class="ri-shopping-cart-line"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c]">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK36iUgq4_o0w4tLamCtAclKJTYtro-wybxiaaCrxKgw&s=10"
+                    class="h-48 w-full object-cover transition duration-500 group-hover:scale-110">
+
+                <div class="p-4">
+
+                    <h3 class="font-semibold">
+                        Rasgulla
+                    </h3>
+
+                    <p class="mt-1 text-sm text-gray-400">
+                        ₹160 / kg
+                    </p>
+
+                    <div class="mt-3 flex items-center justify-between">
+
+                        <span class="text-sm text-[#e8b94f]">
+                            ★ 4.7
+                        </span>
+
+                        <button class="rounded-full bg-[#e8b94f] p-2 text-black">
+                            <i class="ri-shopping-cart-line"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c]">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbQVK_WNu6hPw60no2SpRMaW3SAagQngJxzemIxIi1hA&s=10"
+                    class="h-48 w-full object-cover transition duration-500 group-hover:scale-110">
+
+                <div class="p-4">
+
+                    <h3 class="font-semibold">
+                        Kaju Katli
+                    </h3>
+
+                    <p class="mt-1 text-sm text-gray-400">
+                        ₹420 / kg
+                    </p>
+
+                    <div class="mt-3 flex items-center justify-between">
+
+                        <span class="text-sm text-[#e8b94f]">
+                            ★ 4.9
+                        </span>
+
+                        <button class="rounded-full bg-[#e8b94f] p-2 text-black">
+                            <i class="ri-shopping-cart-line"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c]">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRsLTQYmbcgqVR9pzrCZdLJP85QUUwuF5iLFR3DHI1Xg&s=10"
+                    class="h-48 w-full object-cover transition duration-500 group-hover:scale-110">
+
+                <div class="p-4">
+
+                    <h3 class="font-semibold">
+                        Motichoor Ladoo
+                    </h3>
+
+                    <p class="mt-1 text-sm text-gray-400">
+                        ₹260 / kg
+                    </p>
+
+                    <div class="mt-3 flex items-center justify-between">
+
+                        <span class="text-sm text-[#e8b94f]">
+                            ★ 4.8
+                        </span>
+
+                        <button class="rounded-full bg-[#e8b94f] p-2 text-black">
+                            <i class="ri-shopping-cart-line"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c]">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQE97VrHZd3HSeBBH3Ta3-thtrwbyFjvNOAo2M9hYNuQ&s=10"
+                    class="h-48 w-full object-cover transition duration-500 group-hover:scale-110">
+
+                <div class="p-4">
+
+                    <h3 class="font-semibold">
+                        Dry Fruit Barfi
+                    </h3>
+
+                    <p class="mt-1 text-sm text-gray-400">
+                        ₹480 / kg
+                    </p>
+
+                    <div class="mt-3 flex items-center justify-between">
+
+                        <span class="text-sm text-[#e8b94f]">
+                            ★ 4.7
+                        </span>
+
+                        <button class="rounded-full bg-[#e8b94f] p-2 text-black">
+                            <i class="ri-shopping-cart-line"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="group overflow-hidden rounded-2xl border border-white/10 bg-[#1b100c]">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2alQ1X8X_OC7vtOpYxfB75bYEQI0iKUXRMzhgeZYy9Q&s=10"
+                    class="h-48 w-full object-cover transition duration-500 group-hover:scale-110">
+
+                <div class="p-4">
+
+                    <h3 class="font-semibold">
+                        Fresh Peda
+                    </h3>
+
+                    <p class="mt-1 text-sm text-gray-400">
+                        ₹220 / kg
+                    </p>
+
+                    <div class="mt-3 flex items-center justify-between">
+
+                        <span class="text-sm text-[#e8b94f]">
+                            ★ 4.6
+                        </span>
+
+                        <button class="rounded-full bg-[#e8b94f] p-2 text-black">
+                            <i class="ri-shopping-cart-line"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="about" class="cream px-6 py-20 text-[#21130e] md:px-12">
+
+    <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+
+        <div class="overflow-hidden rounded-[30px]">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyLcBF_x5MN7MFgVFYA1EJrEWll0hsakzo88AR7SUSJQ&s=10"
+                class="h-[500px] w-full object-cover">
+
+        </div>
+
+
+        <div>
+
+            <p class="font-serif italic text-[#a56b27]">
+                Our Story
+            </p>
+
+            <h2 class="serif mt-3 text-5xl font-bold">
+                A Legacy of Sweetness
+            </h2>
+
+            <p class="mt-6 leading-8 text-gray-600">
+                Mithaas began with a simple belief that happiness
+                is sweeter when shared. What started as a small
+                family kitchen in 1998 has grown into a beloved
+                sweet shop known for authentic taste, quality
+                ingredients and timeless traditions.
+            </p>
+
+            <div class="mt-8 grid grid-cols-3 gap-5">
+
+                <div>
+                    <h3 class="serif text-3xl font-bold">
+                        25+
+                    </h3>
+
+                    <p class="text-sm text-gray-500">
+                        Years
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="serif text-3xl font-bold">
+                        50+
+                    </h3>
+
+                    <p class="text-sm text-gray-500">
+                        Varieties
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="serif text-3xl font-bold">
+                        1L+
+                    </h3>
+
+                    <p class="text-sm text-gray-500">
+                        Happy Customers
+                    </p>
+                </div>
+
+            </div>
+
+            <a href="#"
+               class="mt-8 inline-flex rounded-full bg-[#21130e] px-7 py-4 text-white">
+                Read Our Story →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="offers" class="px-6 py-20 md:px-12">
+
+    <div class="mx-auto grid max-w-7xl overflow-hidden rounded-[30px] bg-gradient-to-r from-[#8d342b] to-[#c38a37] lg:grid-cols-2">
+
+        <div class="p-10 md:p-16">
+
+            <p class="font-serif italic text-[#ffe7a0]">
+                Special Offer
+            </p>
+
+            <h2 class="serif mt-4 text-5xl font-bold">
+                Make Every Celebration Sweeter
+            </h2>
+
+            <p class="mt-5 max-w-lg text-white/80">
+                Get special discounts on festive boxes,
+                wedding collections and premium gift hampers.
+            </p>
+
+            <button class="mt-8 rounded-full bg-white px-7 py-4 font-semibold text-black">
+                Shop The Offer →
+            </button>
+
+        </div>
+
+        <div class="min-h-[350px]">
+
+            <img
+                src="images/img.jfif"
+                class="h-full w-full object-cover">
+
+        </div>
+
+    </div>
+
+</section>
+<section class="cream px-6 py-20 text-[#21130e] md:px-12">
+
+    <div class="mx-auto max-w-7xl text-center">
+
+        <p class="font-serif italic text-[#a56b27]">
+            Celebrate With Us
+        </p>
+
+        <h2 class="serif mt-3 text-4xl font-bold md:text-5xl">
+            Perfect For Every Occasion
+        </h2>
+
+        <div class="mt-12 grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-6">
+
+            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7">
+                <i class="ri-fire-line text-4xl text-[#a56b27]"></i>
+                <p class="mt-4 font-semibold">Diwali</p>
+            </div>
+
+            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7">
+                <i class="ri-heart-3-line text-4xl text-[#a56b27]"></i>
+                <p class="mt-4 font-semibold">Weddings</p>
+            </div>
+
+            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7">
+                <i class="ri-cake-3-line text-4xl text-[#a56b27]"></i>
+                <p class="mt-4 font-semibold">Birthdays</p>
+            </div>
+
+            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7">
+                <i class="ri-gift-line text-4xl text-[#a56b27]"></i>
+                <p class="mt-4 font-semibold">Anniversaries</p>
+            </div>
+
+            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7">
+                <i class="ri-sun-line text-4xl text-[#a56b27]"></i>
+                <p class="mt-4 font-semibold">Festivals</p>
+            </div>
+
+            <div class="rounded-2xl border border-[#e7d8c3] bg-white p-7">
+                <i class="ri-briefcase-4-line text-4xl text-[#a56b27]"></i>
+                <p class="mt-4 font-semibold">Corporate</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="bg-[#0d0907] px-6 py-20 md:px-12">
+
+    <div class="mx-auto max-w-7xl">
+
+        <div class="text-center">
+
+            <p class="font-serif italic text-[#e8b94f]">
+                Real People. Real Sweetness.
+            </p>
+
+            <h2 class="serif mt-3 text-4xl font-bold md:text-5xl">
+                What Our Customers Say
+            </h2>
+
+        </div>
+
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-7">
+
+                <div class="text-[#e8b94f]">
+                    ★★★★★
+                </div>
+
+                <p class="mt-5 leading-7 text-gray-300">
+                    "The sweets were incredibly fresh and delicious.
+                    The packaging was beautiful and delivery was quick."
+                </p>
+
+                <div class="mt-6">
+                    <h3 class="font-semibold">
+                        Sneha Patil
+                    </h3>
+
+                    <p class="text-sm text-gray-500">
+                        Pune
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-7">
+
+                <div class="text-[#e8b94f]">
+                    ★★★★★
+                </div>
+
+                <p class="mt-5 leading-7 text-gray-300">
+                    "Amazing taste and authentic quality.
+                    Their Kaju Katli has become a family favorite."
+                </p>
+
+                <div class="mt-6">
+                    <h3 class="font-semibold">
+                        Rohit Sharma
+                    </h3>
+
+                    <p class="text-sm text-gray-500">
+                        Mumbai
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-7">
+
+                <div class="text-[#e8b94f]">
+                    ★★★★★
+                </div>
+
+                <p class="mt-5 leading-7 text-gray-300">
+                    "Ordered a gift box for my friend's birthday.
+                    The presentation was beautiful and everyone loved it."
+                </p>
+
+                <div class="mt-6">
+                    <h3 class="font-semibold">
+                        Priya Deshmukh
+                    </h3>
+
+                    <p class="text-sm text-gray-500">
+                        Nashik
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="bg-[#f7efe2] px-6 py-20 text-[#21130e] md:px-12">
+
+    <div class="mx-auto max-w-5xl text-center">
+
+        <i class="ri-mail-send-line text-5xl text-[#a56b27]"></i>
+
+        <h2 class="serif mt-5 text-4xl font-bold">
+            Stay Sweet, Stay Connected
+        </h2>
+
+        <p class="mx-auto mt-4 max-w-xl text-gray-600">
+            Subscribe for new launches, festive offers,
+            exclusive discounts and delicious updates.
+        </p>
+
+
+        <form class="mx-auto mt-8 flex max-w-xl flex-col gap-3 sm:flex-row">
+
+            <input
+                type="email"
+                placeholder="Enter your email address"
+                class="flex-1 rounded-full border border-gray-300 bg-white px-6 py-4 outline-none">
+
+            <button
+                class="rounded-full bg-[#21130e] px-8 py-4 font-semibold text-white">
+
+                Subscribe
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+<footer id="contact" class="bg-[#0b0705] px-6 py-16 md:px-12">
+
+    <div class="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 lg:grid-cols-4">
+
+        <div>
+
+            <h2 class="serif text-3xl italic">
+                Mithaas
+            </h2>
+
+            <p class="mt-5 leading-7 text-gray-500">
+                Bringing traditional Indian sweetness
+                to your celebrations since 1998.
+            </p>
+
+            <div class="mt-6 flex gap-3">
+
+                <a href="#" class="rounded-full border border-white/10 p-3 hover:bg-[#e8b94f] hover:text-black">
+                    <i class="ri-instagram-line"></i>
+                </a>
+
+                <a href="#" class="rounded-full border border-white/10 p-3 hover:bg-[#e8b94f] hover:text-black">
+                    <i class="ri-facebook-fill"></i>
+                </a>
+
+                <a href="#" class="rounded-full border border-white/10 p-3 hover:bg-[#e8b94f] hover:text-black">
+                    <i class="ri-youtube-line"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h3 class="font-semibold">
+                Quick Links
+            </h3>
+
+            <div class="mt-5 space-y-3 text-sm text-gray-500">
+
+                <a href="#home" class="block hover:text-[#e8b94f]">
+                    Home
+                </a>
+
+                <a href="#sweets" class="block hover:text-[#e8b94f]">
+                    Sweets
+                </a>
+
+                <a href="#offers" class="block hover:text-[#e8b94f]">
+                    Offers
+                </a>
+
+                <a href="#about" class="block hover:text-[#e8b94f]">
+                    About Us
+                </a>
+
+                <a href="#" class="block hover:text-[#e8b94f]">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h3 class="font-semibold">
+                Customer Care
+            </h3>
+
+            <div class="mt-5 space-y-3 text-sm text-gray-500">
+
+                <a href="#" class="block hover:text-[#e8b94f]">
+                    Shipping Policy
+                </a>
+
+                <a href="#" class="block hover:text-[#e8b94f]">
+                    Return Policy
+                </a>
+
+                <a href="#" class="block hover:text-[#e8b94f]">
+                    FAQ
+                </a>
+
+                <a href="#" class="block hover:text-[#e8b94f]">
+                    Track Order
+                </a>
+
+                <a href="#" class="block hover:text-[#e8b94f]">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h3 class="font-semibold">
+                Contact Us
+            </h3>
+
+            <div class="mt-5 space-y-4 text-sm text-gray-500">
+
+                <p>
+                    <i class="ri-phone-line mr-2 text-[#e8b94f]"></i>
+                    +91 98765 43210
+                </p>
+
+                <p>
+                    <i class="ri-mail-line mr-2 text-[#e8b94f]"></i>
+                    hello@mithaas.in
+                </p>
+
+                <p>
+                    <i class="ri-map-pin-line mr-2 text-[#e8b94f]"></i>
+                    Pune, Maharashtra
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="mx-auto mt-12 max-w-7xl border-t border-white/10 pt-6 text-center text-sm text-gray-600">
+
+        © 2026 Mithaas. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+</main>
+
+</body>
+</html>
